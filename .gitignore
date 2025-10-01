@@ -1,0 +1,39 @@
+# Zig build and cache files
+zig-out/
+.zig-cache/
+
+# Editor/IDE files
+.vscode/
+*.swp
+*.swo
+*.bak
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Test output
+*.tmp
+*.test
+
+# Ignore binaries
+*.exe
+*.out
+*.bin
+*.o
+*.obj
+*.dll
+*.so
+*.dylib
+
+# Ignore coverage and profiling
+coverage/
+*.gcda
+*.gcno
+*.gcov
+
+# Ignore node_modules if present
+node_modules/
