@@ -1,8 +1,25 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![Zig Version](https://img.shields.io/badge/Zig-0.15%2B-orange)](https://ziglang.org/)
+[![Build](https://img.shields.io/badge/build-passing-brightgreen)]()
+
+## Install
+
+Clone the repository and add `src/tintz.zig` to your Zig project:
+
+```sh
+zig fetch --save git+https://github.com/dayvster/tintz
+```
+
+Then import the module in your Zig code:
+
+```zig
+const tintz = @import("tintz");
+```
 # tintz
 
 Minimal Zig library for coloring and styling terminal output with ANSI escape codes.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
 [![Zig Version](https://img.shields.io/badge/Zig-0.15%2B-orange)](https://ziglang.org/)
 [![Build](https://img.shields.io/badge/build-passing-brightgreen)]()
 
