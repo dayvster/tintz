@@ -4,10 +4,24 @@
 
 ## Install
 
-Clone the repository and add `src/tintz.zig` to your Zig project:
+Clone the repository and add `src/tintz.zig` to your Zig project.
 
-```sh
-zig fetch --save git+https://github.com/dayvster/tintz
+### Add to build.zig
+
+In your `build.zig`, add the module:
+
+```zig
+const tintz_mod = b.addModule("tintz", .{
+    .root_source_file = b.path("path/to/tintz/src/root.zig"),
+});
+
+const exe = b.addExecutable(.{
+    .name = "your_app",
+    .root_source_file = b.path("src/main.zig"),
+    .imports = &.{
+        .{ .name = "tintz", .module = tintz_mod },
+    },
+});
 ```
 
 Then import the module in your Zig code:
