@@ -8,23 +8,20 @@ Minimal Zig library for coloring and styling terminal output with ANSI escape co
 
 ## Install
 
-Clone the repository and add `src/tintz.zig` to your Zig project.
+Installation
 
-### Add to build.zig
+Fetch the package with Zig:
 
-In your `build.zig`, add the module:
+```sh
+zig fetch --save git+https://github.com/dayvster/tintz
+```
+
+Then add it as a module in your build.zig:
 
 ```zig
 const tintz_mod = b.addModule("tintz", .{
-    .root_source_file = b.path("path/to/tintz/src/root.zig"),
-});
-
-const exe = b.addExecutable(.{
-    .name = "your_app",
-    .root_source_file = b.path("src/main.zig"),
-    .imports = &.{
-        .{ .name = "tintz", .module = tintz_mod },
-    },
+    .root_source_file = b.path("src/root.zig"),
+    .target = target,
 });
 ```
 
